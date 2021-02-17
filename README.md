@@ -128,7 +128,7 @@ If you go to the repo's [Branches](https://github.com/tiimgreen/github-cheat-she
 https://github.com/{user}/{repo}/branches
 ```
 
-... you would see a list of all branches which are not merged into the main branch.
+... you'll see a list of all branches which are not merged into the main branch.
 
 From here you can access the compare page or delete a branch with a click of a button.
 
