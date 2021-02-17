@@ -7,12 +7,12 @@ Eine Sammlung von coolen versteckten und nicht so versteckten Funktionen von Git
 
 ## Inhaltsverzeichnis
   - [GitHub](#github)
-    - [Ignore Whitespace](#ignore-whitespace)
-    - [Adjust Tab Space](#adjust-tab-space)
-    - [Commit History by Author](#commit-history-by-author)
-    - [Cloning a Repository](#cloning-a-repository)
+    - [Whitespace ignorieren](#whitespace-ignorieren)
+    - [Tabulatorabstand einstellen](#tabulatorabstand-einstellen)
+    - [Commit-Historie nach Autor](#commit-historie-nach-autor)
+    - [Klonen eines Repositorys](#klonen-eines-repositorys)
     - [Branch](#branch)
-      - [Compare all Branches to Another Branch](#compare-all-branches-to-another-branch)
+      - [Alle Branches mit einem anderen Branch vergleichen](#alle-branches-mit-einem-anderen-branch-vergleichen)
       - [Comparing Branches](#comparing-branches)
       - [Compare Branches across Forked Repositories](#compare-branches-across-forked-repositories)
     - [Gists](#gists)
@@ -82,45 +82,45 @@ Eine Sammlung von coolen versteckten und nicht so versteckten Funktionen von Git
 
 ## GitHub
 ### Whitespace ignorieren
-Das Hinzufügen von `?w=1` zu einer beliebigen diff-URL entfernt alle Änderungen, die sich nur im Whitespace befinden, so dass du nur den Code siehst, der sich geändert hat.
+Das Hinzufügen von `?w=1` zu einer beliebigen Diff-URL entfernt alle Änderungen, die sich nur im Whitespace befinden, so dass du nur den Code siehst, der sich geändert hat.
 
 ![Diff ohne Whitespace](https://camo.githubusercontent.com/797184940defadec00393e6559b835358a863eeb/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f626c6f672f323031312f736563726574732f776869746573706163652e706e67)
 
 [*Lies mehr über GitHub-Geheimnisse.*](https://github.com/blog/967-github-secrets)
 
 ### Tabulatorabstand einstellen
-Adding `?ts=4` to a diff or file URL will display tab characters as 4 spaces wide instead of the default 8. The number after `ts` can be adjusted to suit your preference. This does not work on Gists, or raw file views, but a [Chrome extension](https://chrome.google.com/webstore/detail/tab-size-on-github/ofjbgncegkdemndciafljngjbdpfmbkn) can automate this.
+Durch Hinzufügen von `?ts=4` zu einer Diff- oder Datei-URL werden Tabulatorzeichen mit einer Breite von 4 Leerzeichen anstelle der standardmäßigen 8 angezeigt. Die Zahl nach `ts` kann nach Belieben angepasst werden. Dies funktioniert nicht bei Gists oder "Raw"-Ansichten, aber eine [Chrome-Erweiterung](https://chrome.google.com/webstore/detail/tab-size-on-github/ofjbgncegkdemndciafljngjbdpfmbkn) kann dies automatisieren.
 
-Here is a Go source file before adding `?ts=4`:
+Hier ist eine Go-Quelldatei vor dem Hinzufügen von `?ts=4`:
 
-![Before, tab space example](http://i.imgur.com/GIT1Fr0.png)
+![Bevor, Beispiel zum Tabulatorabstandtab](http://i.imgur.com/GIT1Fr0.png)
 
-...and this is after adding `?ts=4`:
+...und dies ist nach dem Hinzufügen von `?ts=4`:
 
-![After, tab space example](http://i.imgur.com/70FL4H9.png)
+![Danach, Beispiel zum Tabulatorabstand](http://i.imgur.com/70FL4H9.png)
 
-### Commit History by Author
-To view all commits on a repo by author add `?author={user}` to the URL.
+### Commit-Historie nach Autor
+Um alle Commits in einem Repo nach einem Autor geordnet anzuzeigen, füge `?author={user}` zur URL hinzu.
 
 ```
 https://github.com/rails/rails/commits/master?author=dhh
 ```
 
-![DHH commit history](http://i.imgur.com/S7AE29b.png)
+![DHH Commit-Historie](http://i.imgur.com/S7AE29b.png)
 
-[*Read more about the differences between commits views.*](https://help.github.com/articles/differences-between-commit-views/)
+[*Lies mehr über die Unterschiede zwischen Commit-Ansichten.*](https://help.github.com/articles/differences-between-commit-views/)
 
-### Cloning a Repository
-When cloning a repository the `.git` can be left off the end.
+### Klonen eines Repositorys
+Beim Klonen eines Repositorys kann das `.git` am Ende weggelassen werden.
 
 ```bash
 $ git clone https://github.com/tiimgreen/github-cheat-sheet
 ```
 
-[*Read more about the Git `clone` command.*](http://git-scm.com/docs/git-clone)
+[*Lies mehr über den Git-Befehl `clone`.*](http://git-scm.com/docs/git-clone)
 
 ### Branch
-#### Compare all Branches to Another Branch
+#### Alle Branches mit einem anderen Branch vergleichen
 
 If you go to the repo's [Branches](https://github.com/tiimgreen/github-cheat-sheet/branches) page, next to the Commits button:
 
