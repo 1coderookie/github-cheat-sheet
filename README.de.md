@@ -13,11 +13,11 @@ Eine Sammlung von coolen versteckten und nicht so versteckten Funktionen von Git
     - [Klonen eines Repositorys](#klonen-eines-repositorys)
     - [Branch](#branch)
       - [Alle Branches mit einem anderen Branch vergleichen](#alle-branches-mit-einem-anderen-branch-vergleichen)
-      - [Comparing Branches](#comparing-branches)
-      - [Compare Branches across Forked Repositories](#compare-branches-across-forked-repositories)
+      - [Branches vergleichen](#branches-vergleichen)
+      - [Branches über geforkte Repositories hinweg vergleichen](#branches-über-geforkte-repositories-hinweg-vergleichen)
     - [Gists](#gists)
     - [Git.io](#gitio)
-    - [Keyboard Shortcuts](#keyboard-shortcuts)
+    - [Tastenkombinationen](#tastenkombinationen)
     - [Line Highlighting in Repositories](#line-highlighting-in-repositories)
     - [Closing Issues via Commit Messages](#closing-issues-via-commit-messages)
     - [Cross-Link Issues](#cross-link-issues)
@@ -122,78 +122,78 @@ $ git clone https://github.com/tiimgreen/github-cheat-sheet
 ### Branch
 #### Alle Branches mit einem anderen Branch vergleichen
 
-If you go to the repo's [Branches](https://github.com/tiimgreen/github-cheat-sheet/branches) page, next to the Commits button:
+Wenn du auf die Seite [Branches](https://github.com/tiimgreen/github-cheat-sheet/branches) des Repos gehst, neben dem Button "Commits":
 
 ```
 https://github.com/{user}/{repo}/branches
 ```
 
-... you would see a list of all branches which are not merged into the main branch.
+... siehst du eine Liste aller Branches, die nicht in den Masterbranch zusammengeführt wurden.
 
-From here you can access the compare page or delete a branch with a click of a button.
+Von hier aus kannst du die Vergleichsseite aufrufen oder einen Branch mit einem Klick löschen. 
 
-![Compare branches not merged into master in rails/rails repo - https://github.com/rails/rails/branches](http://i.imgur.com/0FEe30z.png)
+![Vergleiche Branches, die nicht in den Masterbranch im Repo rails/rails zusammengeführt wurden - https://github.com/rails/rails/branches](http://i.imgur.com/0FEe30z.png)
 
-#### Comparing Branches
-To use GitHub to compare branches, change the URL to look like this:
+#### Branches vergleichen
+Um GitHub zum Vergleichen von Branches zu verwenden, ändere die URL, so dass sie wie folgt aussieht:
 
 ```
 https://github.com/{user}/{repo}/compare/{range}
 ```
 
-where `{range} = master...4-1-stable`
+wobei `{range} = master...4-1-stable`
 
-For example:
+Als Beispiel:
 
 ```
 https://github.com/rails/rails/compare/master...4-1-stable
 ```
 
-![Rails branch compare example](http://i.imgur.com/tIRCOsK.png)
+![Rails-Branch Vergleichsbeispiel](http://i.imgur.com/tIRCOsK.png)
 
-`{range}` can be changed to things like:
+`{range}` kann verändert werden in Angaben wie:
 
 ```
 https://github.com/rails/rails/compare/master@{1.day.ago}...master
 https://github.com/rails/rails/compare/master@{2014-10-04}...master
 ```
 
-*Here, dates are in the format `YYYY-MM-DD`*
+*Datumsangaben sind hierbei im Format `YYYY-MM-DD` zu machen.*
 
-![Another compare example](http://i.imgur.com/5dtzESz.png)
+![Ein weiteres Vergleichsbeispiel](http://i.imgur.com/5dtzESz.png)
 
-Branches can also be compared in `diff` and `patch` views:
+Branches können auch in den Ansichten `diff` und `patch` verglichen werden:
 
 ```
 https://github.com/rails/rails/compare/master...4-1-stable.diff
 https://github.com/rails/rails/compare/master...4-1-stable.patch
 ```
 
-[*Read more about comparing commits across time.*](https://help.github.com/articles/comparing-commits-across-time/)
+[*Lies mehr über das Vergleichen von Commits über eine bestimmte Zeit hinweg.*](https://help.github.com/articles/comparing-commits-across-time/)
 
-#### Compare Branches across Forked Repositories
-To use GitHub to compare branches across forked repositories, change the URL to look like this:
+#### Branches über geforkte Repositories hinweg vergleichen
+Um GitHub zum Vergleichen von Branches über geforkte Repositories hinweg zu verwenden, ändere die URL so, dass sie wie folgt aussieht:
 
 ```
 https://github.com/{user}/{repo}/compare/{foreign-user}:{branch}...{own-branch}
 ```
 
-For example:
+Als Beispiel:
 
 ```
 https://github.com/rails/rails/compare/byroot:master...master
 ```
 
-![Forked branch compare](http://i.imgur.com/Q1W6qcB.png)
+![Vergleich eines geforkten Branch](http://i.imgur.com/Q1W6qcB.png)
 
 ### Gists
-[Gists](https://gist.github.com/) are an easy way to work with small bits of code without creating a fully fledged repository.
+[Gists](https://gist.github.com/) sind eine einfache Möglichkeit, mit kleinen Codestücken zu arbeiten, ohne ein vollwertiges Repository zu erstellen.
 
 ![Gist](http://i.imgur.com/VkKI1LC.png?1)
 
-Add `.pibb` to the end of any Gist URL ([like this](https://gist.github.com/tiimgreen/10545817.pibb)) in order to get the *HTML-only* version suitable for embedding in any other site.
+Füge `.pibb` am Ende jeder Gist-URL hinzu ([so wie hier](https://gist.github.com/tiimgreen/10545817.pibb)), um die *HTML-only*-Version zu erhalten, die sich zum Einbetten in jede andere Seite eignet.
 
-Gists can be treated as a repository so they can be cloned like any other:
+Gists können wie ein Repository behandelt werden, so dass sie wie jedes andere geklont werden können:
 
 ```bash
 $ git clone https://gist.github.com/tiimgreen/10545817
@@ -201,7 +201,7 @@ $ git clone https://gist.github.com/tiimgreen/10545817
 
 ![Gists](http://i.imgur.com/BcFzabp.png)
 
-This means you also can modify and push updates to Gists:
+Das bedeutet, dass du sie ebenfalls modifizieren und Updates nach Gist pushen kannst:
 
 ```bash
 $ git commit
@@ -210,15 +210,15 @@ Username for 'https://gist.github.com':
 Password for 'https://tiimgreen@gist.github.com':
 ```
 
-However, Gists do not support directories. All files need to be added to the repository root.
-[*Read more about creating Gists.*](https://help.github.com/articles/creating-gists/)
+Gists unterstützen jedoch keine Verzeichnisse. Alle Dateien müssen in das Stammverzeichnis (root) des Repositorys eingefügt werden.
+[*Lies mehr über das Erstellen von Gists.*](https://help.github.com/articles/creating-gists/)
 
 ### Git.io
-[Git.io](http://git.io) is a simple URL shortener for GitHub.
+[Git.io](http://git.io) ist ein einfacher URL-Verkürzer für GitHub.
 
 ![Git.io](http://i.imgur.com/6JUfbcG.png?1)
 
-You can also use it via pure HTTP using Curl:
+Du kannst es auch via reinem HTTP über Curl verwenden:
 
 ```bash
 $ curl -i http://git.io -F "url=https://github.com/..."
@@ -230,22 +230,22 @@ HTTP/1.1 302 Found
 Location: https://github.com/...
 ```
 
-[*Read more about Git.io.*](https://github.com/blog/985-git-io-github-url-shortener)
+[*Lies mehr über Git.io.*](https://github.com/blog/985-git-io-github-url-shortener)
 
-### Keyboard Shortcuts
-When on a repository page, keyboard shortcuts allow you to navigate easily.
+### Tastenkombinationen
+Wenn du dich auf einer Repository-Seite befindest, kannst du mit Hilfe von Tastenkombinationen einfach navigieren.
 
- - Pressing `t` will bring up a file explorer.
- - Pressing `w` will bring up the branch selector.
- - Pressing `s` will focus the search field for the current repository. Pressing ↓ to select the “All GitHub” option changes the field to search all of GitHub.
- - Pressing `l` will edit labels on existing Issues.
- - Pressing `y` **when looking at a file** (e.g., `https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.md`) will change your URL to one which, in effect, freezes the page you are looking at. If this code changes, you will still be able to see what you saw at that current time.
+ - Durch Drücken von `t` wird ein Dateimanager angezeigt.
+ - Durch Drücken von `w` wird der Branch-Auswähler angezeigt.
+ - Durch Drücken von `s` wird das Suchfeld aktiviert. Wenn man einen Suchbegriff einträgt, so kann man durch Drücken von ↓ die Option “All GitHub” auswählen, die die Suche auf GitHub insgesamt ausweitet.
+ - Durch Drücken von `l` will edit labels on existing Issues.
+ - Durch Drücken von `y` **beim Betrachten einer Datei**  (z.B., `https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.md`) ändert die URL so, dass die Seite, die Sie betrachten, eingefroren wird. Wenn sich dieser Code ändert, kannst du noch immer das sehen, was du zu diesem Zeitpunkt gesehen hast.
 
-To see all of the shortcuts for the current page press `?`:
+Um alle Abkürzungen für die aktuelle Seite zu sehen, drücke `?`:
 
-![Keyboard shortcuts](http://i.imgur.com/y5ZfNEm.png)
+![Tastenkombinationen](http://i.imgur.com/y5ZfNEm.png)
 
-[Read more about search syntax you can use.](https://help.github.com/articles/search-syntax/)
+[Lies mehr über die Such-Syntax, die du verwenden kannst.](https://help.github.com/articles/search-syntax/)
 
 ### Line Highlighting in Repositories
 Either adding, e.g., `#L52` to the end of a code file URL or simply clicking the line number will highlight that line number.
